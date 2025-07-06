@@ -1,6 +1,16 @@
-node_modules
-dist
+# Node
+node_modules/
 .DS_Store
-server/public
-vite.config.ts.*
+*.log
 *.tar.gz
+
+# Vite build output
+dist/
+!dist/public/.gitkeep  # Optional if you want to keep folder structure
+
+# Ignore sensitive or dev-only files
+.env*
+vite.config.ts.*
+
+# Backend (optional)
+server/public/
