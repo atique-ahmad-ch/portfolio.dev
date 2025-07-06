@@ -15,15 +15,15 @@ export function Education() {
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-primary">Bachelor of Science in Computer Science</h3>
-                    <p className="text-gray-600 dark:text-gray-300">University of Central Punjab</p>
+                    <h3 className="text-xl font-semibold text-primary">Bachelor of Science in Computer Engineering</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Information Technology University, Lahore</p>
                   </div>
                   <Badge className="bg-primary text-white mt-2 md:mt-0">
-                    2018 - 2021
+                    2019 - 2023
                   </Badge>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Comprehensive foundation in computer science principles, software engineering practices, 
+                  Comprehensive foundation in computer engineering principles, software engineering practices, 
                   algorithms, data structures, and modern programming paradigms.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -32,6 +32,37 @@ export function Education() {
                   <Badge variant="secondary">Data Structures</Badge>
                   <Badge variant="secondary">Database Systems</Badge>
                   <Badge variant="secondary">Web Development</Badge>
+                  <Badge variant="secondary">AI/ML</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="space-y-8 py-8">
+            {/* Bachelor's Degree */}
+            <Card className="shadow-lg border-l-4 border-primary">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-primary">Master of Science in Data Science</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Information Technology University, Lahore</p>
+                  </div>
+                  <Badge className="bg-primary text-white mt-2 md:mt-0">
+                    2025 - Present
+                  </Badge>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Solid foundation in data science principles, artificial intelligence, machine learning, 
+                  statistical modeling, data analytics, and scalable data-driven systems. Hands-on experience with modern ML frameworks and tools.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Machine Learning</Badge>
+                  <Badge variant="secondary">Deep Learning</Badge>
+                  <Badge variant="secondary">Statistical Modeling</Badge>
+                  <Badge variant="secondary">Data Analytics</Badge>
+                  <Badge variant="secondary">Big Data</Badge>
+                  <Badge variant="secondary">AI Systems</Badge>
+                  <Badge variant="secondary">Python</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -65,6 +96,8 @@ export function Education() {
             </div>
           </div>
         </div>
+
+        
       </div>
     </section>
   );

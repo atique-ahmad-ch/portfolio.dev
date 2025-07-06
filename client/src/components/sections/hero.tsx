@@ -1,5 +1,6 @@
 import { Download, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profileImg from "../../assets/profile.png";
 
 export function Hero() {
   const handleContactClick = () => {
@@ -14,9 +15,16 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center">
         <div className="animate-fade-in">
           {/* Professional placeholder photo */}
-          <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-6xl text-white font-bold shadow-2xl">
-            AA
+          <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-2xl">
+            <img
+              src={profileImg}
+              alt="Profile photo"
+              className="w-full h-full object-cover"
+            />
           </div>
+          {/* <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-6xl text-white font-bold shadow-2xl">
+            AA
+          </div> */}
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Atique Ahmad
@@ -76,7 +84,7 @@ export function Hero() {
               className="text-gray-400 hover:text-primary transition-colors text-2xl"
               asChild
             >
-              <a href="mailto:atique.ayoub.naik@gmail.com">
+              <a href="mailto:engr.atique.ahmad@gmail.com">
                 <Mail className="h-6 w-6" />
               </a>
             </Button>

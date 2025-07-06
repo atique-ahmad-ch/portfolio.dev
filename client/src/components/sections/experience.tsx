@@ -5,7 +5,7 @@ export function Experience() {
   const experiences = [
     {
       title: "Software Engineer",
-      company: "Secure Network",
+      company: "ParadigmNetworks",
       period: "Nov 2023 - Present",
       status: "current",
       description: [
@@ -17,7 +17,7 @@ export function Experience() {
     },
     {
       title: "Associate Software Engineer",
-      company: "FinTech Ltd",
+      company: "MetaApp",
       period: "May 2023 - Nov 2023",
       status: "previous",
       description: [
@@ -28,7 +28,7 @@ export function Experience() {
     },
     {
       title: "Full Stack Developer & Intern",
-      company: "Nivedu.co",
+      company: "Clicky.pk",
       period: "Jan 2022 - Oct 2022",
       status: "previous",
       description: [
@@ -38,8 +38,8 @@ export function Experience() {
       ]
     },
     {
-      title: "Course Coordinator",
-      company: "University of Central Punjab",
+      title: "Lab Engineer",
+      company: "Information Technology University",
       period: "May 2021 - Nov 2021",
       status: "previous",
       description: [

@@ -13,7 +13,7 @@ export function About() {
               <h3 className="text-2xl font-semibold mb-6 text-primary">From Software Engineering to AI Innovation</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 I'm a dedicated software engineer with a strong foundation in full-stack development using Python, Django, React, and modern cloud technologies. 
-                Currently working at Secure Network, I specialize in building LLM-based applications and intelligent solutions.
+                Currently working at ParadigmNetworks, I specialize in building LLM-based applications and intelligent solutions.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 My journey spans from building robust web applications at companies like FinTech Ltd and Nivedu.co 
@@ -37,11 +37,15 @@ export function About() {
                     </div>
                     <div className="flex items-center">
                       <GraduationCap className="h-5 w-5 text-primary mr-3" />
-                      <span>Bachelor's in Computer Science</span>
+                      <span>Master's in Data Science</span>
+                    </div>
+                    <div className="flex items-center">
+                      <GraduationCap className="h-5 w-5 text-primary mr-3" />
+                      <span>Bachelor's in Computer Engineering</span>
                     </div>
                     <div className="flex items-center">
                       <Briefcase className="h-5 w-5 text-primary mr-3" />
-                      <span>3+ Years Software Engineering</span>
+                      <span>2+ Years Software Engineering</span>
                     </div>
                     <div className="flex items-center">
                       <Code className="h-5 w-5 text-primary mr-3" />
