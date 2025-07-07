@@ -16,7 +16,7 @@ export function About() {
                 Currently working at ParadigmNetworks, I specialize in building LLM-based applications and intelligent solutions.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                My journey spans from building robust web applications at companies like FinTech Ltd and Nivedu.co 
+                My journey spans from building robust web applications at companies like eBricks-Inc Ltd and FormSoft-Inc
                 to now exploring the frontiers of artificial intelligence and machine learning integration. I believe in the power of 
                 data-driven solutions and intelligent automation to solve real-world problems.
               </p>
