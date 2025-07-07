@@ -103,12 +103,25 @@ export function Contact() {
 
               {/* Social Links */}
               <div className="flex space-x-4 pt-8">
-                <Button size="icon" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button size="icon" className="bg-gray-800 hover:bg-gray-900 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-800">
-                  <Github className="h-5 w-5" />
-                </Button>
+                <a
+                  href="https://www.linkedin.com/in/atiqueahmad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="icon" className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </a>
+
+                <a
+                  href="https://github.com/atique-ahmad-ch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="icon" className="bg-gray-800 hover:bg-gray-900 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-800">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </a>
                 <Button size="icon" className="bg-blue-400 hover:bg-blue-500 text-white">
                   <Twitter className="h-5 w-5" />
                 </Button>

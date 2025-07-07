@@ -61,23 +61,32 @@ export function Hero() {
               variant="ghost"
               size="icon"
               className="text-gray-400 hover:text-primary transition-colors text-2xl"
+              asChild
             >
-              <Linkedin className="h-6 w-6" />
+              <a
+                href="https://www.linkedin.com/in/atiqueahmad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
             </Button>
+
             <Button
               variant="ghost"
               size="icon"
               className="text-gray-400 hover:text-primary transition-colors text-2xl"
+              asChild
             >
-              <Github className="h-6 w-6" />
+              <a
+                href="https://github.com/atique-ahmad-ch"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-6 w-6" />
+              </a>
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-gray-400 hover:text-primary transition-colors text-2xl"
-            >
-              <Twitter className="h-6 w-6" />
-            </Button>
+            
             <Button
               variant="ghost"
               size="icon"
