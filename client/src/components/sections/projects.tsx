@@ -14,7 +14,7 @@ export function Projects() {
       featured: true
     },
     {
-      title: "FinTech Dashboard",
+      title: "Data Visualization Dashboard",
       description: "Comprehensive financial technology platform with real-time analytics, secure transactions, and advanced reporting features.",
       icon: TrendingUp,
       gradient: "from-green-500 to-blue-600",

@@ -21,7 +21,7 @@ export function Experience() {
       period: "May 2023 - Nov 2023",
       status: "previous",
       description: [
-        "Built end-to-end fintech services using Django and React.js for cross-platform applications",
+        "Built end-to-end MetaApp services using Django and React.js for cross-platform applications",
         "Developed multi-functional integrated systems/APIs using DRF and enhanced data security",
         "Improved application performance by optimizing queries and implementing caching"
       ]
