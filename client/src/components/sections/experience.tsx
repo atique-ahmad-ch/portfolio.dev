@@ -40,7 +40,7 @@ export function Experience() {
     {
       title: "Lab Engineer",
       company: "Information Technology University",
-      period: "May 2021 - Nov 2021",
+      period: " Jan 2024 - July 2024",
       status: "previous",
       description: [
         "Lectured students on mobile application development and modern frameworks",
