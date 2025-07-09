@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +11,6 @@ import { insertContactSchema, type InsertContact } from "@shared/schema";
 
 export function Contact() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
   const {
     register,
@@ -25,29 +21,13 @@ export function Contact() {
     resolver: zodResolver(insertContactSchema)
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error sending message",
-        description: error.message || "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
   const onSubmit = (data: InsertContact) => {
-    contactMutation.mutate(data);
+    // Simulate form submission with a success message
+    toast({
+      title: "Message received!",
+      description: "Thank you for your message. Please email me directly at engr.atique.ahmad@gmail.com",
+    });
+    reset();
   };
 
   return (
@@ -190,9 +170,9 @@ export function Contact() {
                   <Button
                     type="submit"
                     className="w-full bg-primary hover:bg-secondary text-white"
-                    disabled={isSubmitting || contactMutation.isPending}
+                    disabled={isSubmitting}
                   >
-                    {isSubmitting || contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
