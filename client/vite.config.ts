@@ -15,4 +15,8 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5000,
   },
+  build: {
+    outDir: "dist",         // ✅ Ensures output goes to ./dist
+    emptyOutDir: true,      // ✅ Clean old build before writing
+  },
 });
