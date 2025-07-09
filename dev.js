@@ -3,20 +3,17 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const clientDir = path.resolve(__dirname, '../client');
 
 console.log('[express] serving on port 5000');
 
-// Start Vite development server
 const viteProcess = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000'], {
-  cwd: clientDir,
+  cwd: path.join(__dirname, 'client'),
   stdio: 'inherit',
   shell: true
 });
 
 viteProcess.on('close', (code) => {
   console.log(`Vite process exited with code ${code}`);
-  process.exit(code);
 });
 
 // Handle graceful shutdown
