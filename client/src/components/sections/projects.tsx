@@ -6,47 +6,69 @@ import { ExternalLink, Github, Bot, TrendingUp, Database, GraduationCap, Sparkle
 export function Projects() {
   const projects = [
     {
+      title: "Video Editing Agency Website",
+      description: "A high-conversion React.js website for a premium video editing agency. Designed to showcase services, portfolio, and client success stories, the site is fully deployed on Vercel with custom domain integration for a professional online presence.",
+      icon: Film,   // you can replace with any Lucide icon like 'Video' or 'Clapperboard'
+      gradient: "from-red-500 to-orange-500",
+      technologies: ["React.js", "TailwindCSS", "Next.js", "Vercel", "Domain Integration"],
+      featured: true,
+      liveDemo: "https://clipmastrs.online",  
+      code: "https://github.com/yourusername/video-editing-agency" 
+    },
+    {
       title: "LLM-Based Messaging Platform",
       description: "Advanced messaging application integrating Large Language Models for intelligent conversation assistance and automation.",
       icon: Bot,
       gradient: "from-primary to-accent",
       technologies: ["Python", "LLM", "AWS", "Django"],
-      featured: true
+      featured: true,
+      liveDemo: "",   
+      code: ""     
     },
     {
       title: "Data Visualization Dashboard",
       description: "Comprehensive financial technology platform with real-time analytics, secure transactions, and advanced reporting features.",
       icon: TrendingUp,
       gradient: "from-green-500 to-blue-600",
-      technologies: ["React", "Django", "PostgreSQL", "DRF"]
+      technologies: ["React", "Django", "PostgreSQL", "DRF"],
+      liveDemo: "",   
+      code: ""     
     },
     {
       title: "Data Analytics Platform", 
       description: "Advanced data analytics platform with machine learning models for predictive analysis and business intelligence.",
       icon: Database,
       gradient: "from-accent to-primary",
-      technologies: ["Python", "Pandas", "ML", "Visualization"]
+      technologies: ["Python", "Pandas", "ML", "Visualization"],
+      liveDemo: "",   
+      code: ""     
     },
     {
       title: "E-Learning Platform",
       description: "Full-featured e-learning platform with course management, interactive content, and progress tracking for Nivedu.co.",
       icon: GraduationCap,
       gradient: "from-purple-500 to-pink-500",
-      technologies: ["React", "Node.js", "MongoDB", "Express"]
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      liveDemo: "",   
+      code: ""     
     },
     {
       title: "AI Content Generator",
       description: "Intelligent content generation tool using advanced prompt engineering and LLM integration for automated content creation.",
       icon: Sparkles,
       gradient: "from-indigo-500 to-cyan-500",
-      technologies: ["Python", "OpenAI API", "FastAPI", "React"]
+      technologies: ["Python", "OpenAI API", "FastAPI", "React"],
+      liveDemo: "",   
+      code: ""     
     },
     {
       title: "Cloud Infrastructure Suite",
       description: "Scalable cloud infrastructure solution with automated deployment, monitoring, and optimization across AWS and Azure platforms.",
       icon: Cloud,
       gradient: "from-gray-600 to-blue-700",
-      technologies: ["AWS", "Azure", "Docker", "Terraform"]
+      technologies: ["AWS", "Azure", "Docker", "Terraform"],
+      liveDemo: "",   
+      code: ""     
     }
   ];
 
@@ -78,13 +100,17 @@ export function Projects() {
                       ))}
                     </div>
                     <div className="flex justify-between items-center">
-                      <Button variant="link" className="text-primary hover:text-secondary transition-colors p-0">
-                        <ExternalLink className="h-4 w-4 mr-1" />
-                        Live Demo
+                      <Button asChild variant="link" className="text-primary hover:text-secondary transition-colors p-0">
+                        <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-1" />
+                          Live Demo
+                        </a>
                       </Button>
-                      <Button variant="link" className="text-gray-500 hover:text-primary transition-colors p-0">
-                        <Github className="h-4 w-4 mr-1" />
-                        Code
+                      <Button asChild variant="link" className="text-gray-500 hover:text-primary transition-colors p-0">
+                        <a href={project.code} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-1" />
+                          Code
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
