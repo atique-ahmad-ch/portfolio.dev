@@ -12,17 +12,15 @@ export function About() {
             <div className="animate-slide-up">
               <h3 className="text-2xl font-semibold mb-6 text-primary">From Software Engineering to AI Innovation</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                I'm a dedicated software engineer with a strong foundation in full-stack development using Python, Django, React, and modern cloud technologies. 
-                Currently working at ParadigmNetworks, I specialize in building LLM-based applications and intelligent solutions.
+              I’m a Software Engineer currently pursuing an MS in Data Science, with a growing focus on AI, machine learning, and data-driven innovation. 
+              At ParadigmNetworks, I’m working on LLM-powered intelligent applications that push the boundaries of automation and smart systems.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                My journey spans from building robust web applications at companies like eBricks-Inc Ltd and FormSoft-Inc
-                to now exploring the frontiers of artificial intelligence and machine learning integration. I believe in the power of 
-                data-driven solutions and intelligent automation to solve real-world problems.
+                My background includes building cloud-based and web-based services at Clicky.pk, eBricks-Inc Ltd, and FormSoft-Inc, 
+                where I gained hands-on experience with Python, Django, React, AWS, and Azure.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                With experience in cloud platforms like AWS and Azure, I'm passionate about combining 
-                my software engineering expertise with advanced AI/ML techniques to create innovative, scalable solutions.
+                I’m passionate about leveraging data science and AI to create impactful solutions that address real-world challenges.
               </p>
             </div>
 
