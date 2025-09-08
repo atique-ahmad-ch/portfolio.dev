@@ -31,7 +31,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
-            Software Engineer & AI/Data Science Expert
+            Software Engineer & AI/Data Science 
           </p>
 
           <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
