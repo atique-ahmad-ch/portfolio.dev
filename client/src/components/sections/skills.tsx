@@ -10,7 +10,7 @@ export function Skills() {
       skills: [
         { name: "Python", level: 95 },
         { name: "JavaScript", level: 85 },
-        { name: "SQL", level: 85 }
+        { name: "SQL", level: 85 },
         { name: "Golang", level: 65 },
       ]
     },
@@ -20,7 +20,7 @@ export function Skills() {
       skills: [
         { name: "Django", level: 85 },
         { name: "FastAPI", level: 90 },
-        { name: "Flask", level: 90 }
+        { name: "Flask", level: 90 },
         { name: "React.js", level: 80 },
       ]
     },
