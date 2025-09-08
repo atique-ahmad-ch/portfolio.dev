@@ -13,7 +13,7 @@ export function Projects() {
       technologies: ["React.js", "TailwindCSS", "Next.js", "Vercel", "Domain Integration"],
       featured: true,
       liveDemo: "https://clipmastrs.online",  
-      code: "https://github.com/yourusername/video-editing-agency" 
+      code: "https://github.com/atique-ahmad-ch/clipmasters" 
     },
     {
       title: "LLM-Based Messaging Platform",
