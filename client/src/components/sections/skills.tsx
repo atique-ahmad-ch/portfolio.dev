@@ -10,7 +10,7 @@ export function Skills() {
       skills: [
         { name: "Python", level: 95 },
         { name: "JavaScript", level: 85 },
-        { name: "TypeScript", level: 80 },
+        { name: "C++", level: 80 },
         { name: "SQL", level: 85 }
       ]
     },
@@ -18,10 +18,10 @@ export function Skills() {
       title: "Frameworks",
       icon: Layers,
       skills: [
-        { name: "Django", level: 95 },
-        { name: "React.js", level: 85 },
-        { name: "Node.js", level: 80 },
-        { name: "FastAPI", level: 75 }
+        { name: "Django", level: 85 },
+        { name: "FastAPI", level: 90 },
+        { name: "Flask", level: 90 }
+        { name: "React.js", level: 80 },
       ]
     },
     {
@@ -29,9 +29,8 @@ export function Skills() {
       icon: Database,
       skills: [
         { name: "MongoDB", level: 85 },
+        { name: "MySQL", level: 85 },
         { name: "PostgreSQL", level: 85 },
-        { name: "MySQL", level: 80 },
-        { name: "Redis", level: 70 }
       ]
     },
     {
