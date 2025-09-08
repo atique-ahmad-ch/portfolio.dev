@@ -7,7 +7,7 @@ export function Projects() {
   const projects = [
     {
       title: "Video Editing Agency Website",
-      description: "A high-conversion React.js website for a premium video editing agency. Designed to showcase services, portfolio, and client success stories, the site is fully deployed on Vercel with custom domain integration for a professional online presence.",
+      description: "A premium React.js website for a video editing agency, built to maximize conversions and showcase services, portfolio, and client success.",
       icon: Film,   // you can replace with any Lucide icon like 'Video' or 'Clapperboard'
       gradient: "from-red-500 to-orange-500",
       technologies: ["React.js", "TailwindCSS", "Next.js", "Vercel", "Domain Integration"],
