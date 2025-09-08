@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Bot, TrendingUp, Database, GraduationCap, Sparkles, Cloud } from "lucide-react";
+import { ExternalLink, Github, Bot, Film, TrendingUp, Database, GraduationCap, Sparkles, Cloud } from "lucide-react";
 
 export function Projects() {
   const projects = [
