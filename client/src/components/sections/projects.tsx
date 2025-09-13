@@ -12,7 +12,7 @@ export function Projects() {
       gradient: "from-red-500 to-orange-500",
       technologies: ["React.js", "TailwindCSS", "Next.js", "Vercel", "Domain Integration"],
       featured: true,
-      liveDemo: "https://clipmastrs.online",  
+      liveDemo: "https://www.clipmasters.uk/",  
       code: "https://github.com/atique-ahmad-ch/clipmasters" 
     },
     {
