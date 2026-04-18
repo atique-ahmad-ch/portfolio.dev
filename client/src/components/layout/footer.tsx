@@ -21,8 +21,8 @@ export function Footer() {
           <div className="mb-8">
             <h3 className="text-2xl font-bold mb-4">Atique Ahmad</h3>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Building the future with intelligent software solutions and data-driven insights. 
-              Let's innovate together in the world of AI and technology.
+              AI/ML Engineer & Software Engineer passionate about LLM research, model fine-tuning,
+              and building intelligent systems. Open to research collaborations and PhD opportunities.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export function Footer() {
 
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400">
-              © 2024 Atique Ahmad. All rights reserved. Built with passion for innovation.
+              © 2025 Atique Ahmad. All rights reserved.
             </p>
           </div>
         </div>

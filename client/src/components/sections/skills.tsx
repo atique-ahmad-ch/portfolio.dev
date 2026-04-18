@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Layers, Database, Cloud, Brain, BarChart, Cog } from "lucide-react";
+import { Code, Layers, Database, Cloud, Brain, BarChart, Cog, Cpu } from "lucide-react";
 
 export function Skills() {
   const skillCategories = [
@@ -25,12 +25,23 @@ export function Skills() {
       ]
     },
     {
+      title: "Deep Learning",
+      icon: Cpu,
+      skills: [
+        { name: "PyTorch", level: 85 },
+        { name: "TensorFlow", level: 80 },
+        { name: "Transformers", level: 88 },
+        { name: "PyTorch Lightning", level: 80 },
+      ]
+    },
+    {
       title: "Databases",
       icon: Database,
       skills: [
         { name: "MongoDB", level: 85 },
         { name: "MySQL", level: 85 },
         { name: "PostgreSQL", level: 85 },
+        { name: "Redis", level: 70 },
       ]
     },
     {
@@ -47,45 +58,77 @@ export function Skills() {
 
   const aiSkills = [
     {
-      title: "Machine Learning",
+      title: "LLM / SLM Engineering",
       icon: Brain,
-      skills: ["LLM Integration", "Model Building", "Prompt Engineering", "AI APIs"]
+      skills: [
+        "LLM Fine-tuning",
+        "SLM Training",
+        "Model Inference",
+        "LLM Deployment",
+        "Prompt Engineering",
+        "RAG Pipelines",
+        "Hallucination Detection",
+        "HuggingFace Hub",
+      ]
     },
     {
-      title: "Data Analysis", 
-      icon: BarChart,
-      skills: ["Data Modeling", "Statistical Analysis", "Data Visualization", "ETL Processes"]
-    },
-    {
-      title: "Development",
+      title: "AI Frameworks & Tools",
       icon: Cog,
-      skills: ["AI Integration", "API Development", "Cloud Deployment", "Performance Optimization"]
+      skills: [
+        "PyTorch",
+        "TensorFlow",
+        "PyTorch Lightning",
+        "Transformers (HF)",
+        "LangChain",
+        "OpenAI API",
+        "vLLM / Ollama",
+        "PEFT / LoRA",
+      ]
+    },
+    {
+      title: "Data Science",
+      icon: BarChart,
+      skills: [
+        "Statistical Modeling",
+        "Data Visualization",
+        "Feature Engineering",
+        "ETL Pipelines",
+        "Pandas / NumPy",
+        "Scikit-learn",
+        "NLP",
+        "Model Evaluation",
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-white dark:bg-zinc-950">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Technical Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Technical Skills
+        </h2>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {skillCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
-                <Card key={index} className="shadow-lg">
+                <Card key={index} className="shadow-sm border border-gray-200 dark:border-zinc-800">
                   <CardContent className="p-6">
-                    <div className="text-center mb-6">
-                      <IconComponent className="h-8 w-8 text-primary mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold">{category.title}</h3>
+                    <div className="text-center mb-5">
+                      <IconComponent className="h-7 w-7 text-gray-700 dark:text-gray-300 mx-auto mb-3" />
+                      <h3 className="text-base font-semibold text-gray-900 dark:text-white">{category.title}</h3>
                     </div>
                     <div className="space-y-3">
                       {category.skills.map((skill, skillIndex) => (
-                        <div key={skillIndex} className="flex justify-between items-center">
-                          <span className="text-sm">{skill.name}</span>
-                          <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                            <div 
-                              className="bg-primary h-2 rounded-full transition-all duration-1000"
+                        <div key={skillIndex}>
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-xs text-gray-600 dark:text-gray-400">{skill.name}</span>
+                            <span className="text-xs text-gray-400 dark:text-gray-500">{skill.level}%</span>
+                          </div>
+                          <div className="w-full bg-gray-100 dark:bg-zinc-800 rounded-full h-1.5">
+                            <div
+                              className="bg-gray-800 dark:bg-gray-200 h-1.5 rounded-full transition-all duration-1000"
                               style={{ width: `${skill.level}%` }}
                             ></div>
                           </div>
@@ -100,18 +143,24 @@ export function Skills() {
 
           {/* AI/ML Skills */}
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-center mb-8">AI/ML & Data Science</h3>
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 p-8 rounded-xl">
-              <div className="grid md:grid-cols-3 gap-6">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-gray-900 dark:text-white">
+              AI/ML & Data Science
+            </h3>
+            <div className="bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 p-8 rounded-xl">
+              <div className="grid md:grid-cols-3 gap-8">
                 {aiSkills.map((category, index) => {
                   const IconComponent = category.icon;
                   return (
                     <div key={index} className="text-center">
-                      <IconComponent className="h-8 w-8 text-primary mx-auto mb-4" />
-                      <h4 className="font-semibold mb-3">{category.title}</h4>
+                      <IconComponent className="h-7 w-7 text-gray-700 dark:text-gray-300 mx-auto mb-3" />
+                      <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">{category.title}</h4>
                       <div className="flex flex-wrap justify-center gap-2">
                         {category.skills.map((skill, skillIndex) => (
-                          <Badge key={skillIndex} variant="secondary" className="bg-white dark:bg-gray-700">
+                          <Badge
+                            key={skillIndex}
+                            variant="secondary"
+                            className="bg-white dark:bg-zinc-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-zinc-700 text-xs"
+                          >
                             {skill}
                           </Badge>
                         ))}
