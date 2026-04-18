@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Bot, Film, TrendingUp, Database, GraduationCap, Sparkles, Cloud, FlaskConical } from "lucide-react";
+import { ExternalLink, Github, Bot, Film, TrendingUp, Database, GraduationCap, Sparkles, Cloud, FlaskConical, ImageIcon, ShoppingBag } from "lucide-react";
 
 export function Projects() {
   const projects = [
@@ -12,6 +12,18 @@ export function Projects() {
       icon: FlaskConical,
       gradient: "from-zinc-800 to-zinc-600",
       technologies: ["PyTorch", "Transformers", "HuggingFace", "Python", "Fine-tuning", "RAG", "NLP"],
+      tag: "Research",
+      featured: true,
+      liveDemo: "",
+      code: ""
+    },
+    {
+      title: "CNN Deep Metric Learning for Image Retrieval",
+      description:
+        "CNN trained to learn 128-dimensional embeddings for image retrieval — similar images cluster together in embedding space. Benchmarked three approaches: Contrastive Loss with Random Pairs, Triplet Loss with Random Triplets, and Triplet Loss with Hard Negative Mining.",
+      icon: ImageIcon,
+      gradient: "from-zinc-700 to-zinc-500",
+      technologies: ["PyTorch", "CNN", "Deep Metric Learning", "Triplet Loss", "Contrastive Loss", "Python"],
       tag: "Research",
       featured: true,
       liveDemo: "",
@@ -27,6 +39,18 @@ export function Projects() {
       tag: "Professional",
       featured: true,
       liveDemo: "",
+      code: ""
+    },
+    {
+      title: "UniMerchant — E-Commerce Store",
+      description:
+        "Full e-commerce storefront for a UK-based home furnishings retailer. Features product catalogue across Furniture, Shelves, Kitchen & Home Decor categories, shopping cart, checkout with multiple payment methods, and WhatsApp support integration.",
+      icon: ShoppingBag,
+      gradient: "from-slate-600 to-slate-400",
+      technologies: ["HTML", "CSS", "JavaScript", "E-Commerce", "Payment Integration"],
+      tag: "Web",
+      featured: false,
+      liveDemo: "https://www.unimerchant.store/",
       code: ""
     },
     {
