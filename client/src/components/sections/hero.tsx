@@ -141,7 +141,7 @@ export function Hero() {
               <Mail className="h-6 w-6" />
             </a>
             <a
-              href="https://atique-ahmad.site"
+              href="https://www.atique-ahmad.site"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"

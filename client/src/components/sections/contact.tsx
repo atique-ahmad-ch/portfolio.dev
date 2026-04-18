@@ -150,7 +150,7 @@ export function Contact() {
                   <div>
                     <p className="text-xs text-gray-400 mb-0.5">Website</p>
                     <a
-                      href="https://atique-ahmad.site"
+                      href="https://www.atique-ahmad.site"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-white font-medium text-sm transition-colors"
@@ -192,7 +192,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://atique-ahmad.site"
+                  href="https://www.atique-ahmad.site"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
