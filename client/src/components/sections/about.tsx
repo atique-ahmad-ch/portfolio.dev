@@ -1,4 +1,4 @@
-import { MapPin, GraduationCap, Briefcase, Code, Languages, FlaskConical, BookOpen } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Code, Server, FlaskConical, Globe, Mail, Languages } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function About() {
@@ -11,26 +11,41 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="animate-slide-up space-y-5">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                Engineer, Researcher & Lifelong Learner
+                ML/AI Engineer, Lifelong Learner & Researcher
               </h3>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a Software Engineer currently pursuing an MS in Data Science at Information Technology University,
-                Lahore. At ParadigmNetworks, I build LLM-powered intelligent applications — from architecture to
-                deployment — on AWS and Azure.
+                I'm an ML/AI Engineer with hands-on experience building end-to-end AI systems — from model training
+                and fine-tuning to production deployment. Currently pursuing an{" "}
+                <strong className="text-gray-900 dark:text-white">MS in Data Science at ITU Lahore</strong>, I've
+                worked across the full AI stack at eBricks-inc | Paradigm Networks.
               </p>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                My engineering background spans cloud-based and web-based systems at Clicky.pk, eBricks-Inc Ltd, and
-                FormSoft-Inc, where I worked with Python, Django, React, and various cloud platforms.
+                <strong className="text-gray-900 dark:text-white">AI & ML:</strong> I work with classical ML, deep
+                learning architectures (ANN, CNN, RNN, LSTM, Transformers), and modern GenAI — including LLM/SLM
+                fine-tuning, synthetic data generation, labeling pipelines, and RAG. My primary stack is{" "}
+                <strong className="text-gray-900 dark:text-white">PyTorch and TensorFlow</strong> with Python
+                (NumPy, Pandas, Scikit-learn).
               </p>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                My research focus is on <strong className="text-gray-900 dark:text-white">Large Language Models and Small Language Models</strong> —
-                including fine-tuning, inference optimization, RAG pipelines, and hallucination detection. I am deeply
-                interested in AI safety and factuality evaluation of generative models.
+                <strong className="text-gray-900 dark:text-white">Engineering:</strong> On the backend I build with{" "}
+                <strong className="text-gray-900 dark:text-white">FastAPI and Django</strong>, and on the frontend
+                with <strong className="text-gray-900 dark:text-white">React.js</strong> — letting me take an AI
+                feature from model to UI without handoffs.
               </p>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I am actively interested in <strong className="text-gray-900 dark:text-white">research collaborations and PhD opportunities</strong> in
-                AI, NLP, and machine learning. I believe that rigorous research and engineering together drive the
-                most meaningful impact in AI.
+                <strong className="text-gray-900 dark:text-white">Deployment:</strong> I containerize with{" "}
+                <strong className="text-gray-900 dark:text-white">Docker</strong> (Docker Compose), deploy on{" "}
+                <strong className="text-gray-900 dark:text-white">AWS</strong> (EC2, S3, Lambda), and manage
+                end-to-end CI/CD pipelines and Git workflows.
+              </p>
+
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Passionate about the intersection of LLMs, intelligent backends, and scalable AI products.{" "}
+                <strong className="text-gray-900 dark:text-white">Open to ML/AI and Full-Stack AI Engineering roles globally.</strong>
               </p>
             </div>
 
@@ -53,23 +68,36 @@ export function About() {
                     </div>
                     <div className="flex items-center gap-3">
                       <Briefcase className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">2+ Years Software Engineering Experience</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Code className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Full-Stack & AI/ML Development</span>
+                      <span className="text-gray-700 dark:text-gray-300">eBricks-inc | Paradigm Networks</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <FlaskConical className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Research: LLMs, SLMs, RAG, Hallucination Detection</span>
+                      <span className="text-gray-700 dark:text-gray-300">LLMs · SLMs · Fine-tuning · RAG · Agentic AI</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <BookOpen className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Open to PhD Programs in AI/NLP/ML</span>
+                      <Code className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">FastAPI · Django · React.js</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Server className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Docker · AWS (EC2, S3, Lambda) · CI/CD</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Globe className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Open to ML/AI & Full-Stack AI roles globally</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Languages className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">English, Urdu</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="h-5 w-5 text-gray-500 dark:text-gray-400 shrink-0" />
+                      <a
+                        href="mailto:engr.atique.ahmad@gmail.com"
+                        className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        engr.atique.ahmad@gmail.com
+                      </a>
                     </div>
                   </div>
                 </CardContent>
