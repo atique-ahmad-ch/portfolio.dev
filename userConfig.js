@@ -59,6 +59,7 @@ const userConfig = {
             highlights: [
                 "Developed and maintained LLM-based messaging applications using advanced AI techniques, from fine-tuning through production deployment.",
                 "Built agentic evaluation and verification services that fact-check and score LLM outputs for hallucination and factuality before they reach users.",
+                "Extended the evaluation pipeline beyond final-output checks to score agent trajectories — tool selection, reasoning steps, and task completion — catching failures earlier in multi-step agentic workflows.",
                 "Reduced CPU consumption on inference workloads and deployed solutions across AWS and Azure cloud platforms.",
                 "Designed larger-scale database integrations and automation processes for business pipelines.",
                 "Contributed to open-source development and evaluated LLM solutions for performance optimization."
