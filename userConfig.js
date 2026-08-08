@@ -23,24 +23,26 @@ const userConfig = {
 
     // --- Bio (short + long) ---
     bioShort:
-        "ML/AI engineer building the full stack around LLMs — fine-tuning, RAG, \
-        hallucination detection, and the agentic systems that put them into production.",
+        "ML/AI Engineer building reliable LLM systems — from fine-tuning small language models to \
+        catch hallucinations, to shipping production RAG and agentic pipelines.",
     bioLong: [
-        "I'm an ML/AI Engineer with hands-on experience building end-to-end AI systems — from model \
-         training and fine-tuning to production deployment. I'm currently pursuing an MS in Data Science \
-         at ITU Lahore, and have worked across the full AI stack at eBricks-inc | Paradigm Networks.",
+        "I'm an ML/AI Engineer with two years of experience taking AI systems from research to production \
+         — model fine-tuning, RAG pipelines, and the agentic infrastructure that keeps LLM outputs reliable. \
+         I'm currently pursuing an MS in Data Science at ITU Lahore, building on a BS in Computer Engineering \
+         from the same university.",
 
-        "I work with classical ML, deep learning architectures (ANN, CNN, RNN, LSTM, Transformers), and \
-         modern GenAI — including LLM/SLM fine-tuning, synthetic data generation, labeling pipelines, and \
-         RAG. My primary stack is PyTorch and TensorFlow with Python (NumPy, Pandas, Scikit-learn).",
+        "My work spans classical ML and deep learning — CNNs, RNNs, Transformers — through to modern GenAI: \
+         fine-tuning LLMs and SLMs, building RAG pipelines, and, most recently, training small language \
+         models to detect hallucinations in RAG outputs before they reach a user. I work primarily in \
+         PyTorch and TensorFlow, with the Python data stack underneath.",
 
-        "On the backend I build with FastAPI and Django, and on the frontend with React.js — letting me \
-         take an AI feature from model to UI without handoffs. I containerize with Docker, deploy on AWS \
-         and Azure, and manage end-to-end CI/CD pipelines.",
+        "I don't stop at the model. I build the FastAPI/Django backends that serve it and the React \
+         frontends that surface it, containerize with Docker, and deploy on AWS and Azure with CI/CD end \
+         to end — so I can take an AI feature from a training script to something a user actually touches.",
 
-        "Lately I've been focused on the reliability side of LLMs — fine-tuning small language models to \
-         detect hallucinations in RAG pipelines, and building the agentic evaluation systems that check an \
-         LLM's work before it ships."
+        "Right now I'm most interested in the reliability side of LLMs — hallucination detection, \
+         evaluation, and agentic systems — and I'm open to ML/AI and full-stack AI roles, as well as \
+         research and PhD opportunities."
     ],
 
     // --- Experience ---
