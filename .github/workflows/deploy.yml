@@ -1,0 +1,74 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        # SECURITY notes on what we DO ship in the bundle:
+        #
+        # * VITE_GITHUB_TOKEN — a *fine-grained* PAT scoped to READ-ONLY on
+        #   PUBLIC resources only. 
+        #
+        # * VITE_OPENROUTER_API_KEY — used only with the `openrouter/free`
+        #   meta-model. No credits, no billable models. 
+        #
+        # DO NOT add tokens with write scope, `repo`, private-repo access,
+        # or paid-model billing. The guard step below rejects legacy
+        # `ghp_`/`ghs_` classic tokens because they can't be reliably
+        # scope-limited.
+        env:
+          VITE_GITHUB_USERNAME: ${{ github.repository_owner }}
+          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
+          VITE_OPENROUTER_API_KEY: ${{ secrets.VITE_OPENROUTER_API_KEY }}
+        run: npm run build
+
+      - name: Reject high-risk token patterns in bundle
+        # Defense-in-depth: fine-grained (`github_pat_`) and OpenRouter
+        # (`sk-or-v1-`) are intentionally bundled.
+        run: |
+          set -e
+          if grep -rE '(ghp_|ghs_|gho_|ghu_)[A-Za-z0-9_]{20,}' dist/ ; then
+            echo "::error::Classic GitHub PAT detected in bundle. Rotate to a fine-grained token."
+            exit 1
+          fi
+          if grep -rE 'sk-(proj|org|admin|live)[-_][A-Za-z0-9]{20,}' dist/ ; then
+            echo "::error::Paid-tier OpenAI-style key detected in bundle. Aborting."
+            exit 1
+          fi
+          echo "Bundle contains only scope-safe fine-grained / free-tier keys."
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
