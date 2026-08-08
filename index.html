@@ -1,16 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atique Ahmad - Software Engineer</title>
-    <meta name="description" content="Portfolio of Atique Ahmad, a Software Engineer specializing in AI/Data Science. Explore projects, experience, and get in touch.">
-    <meta property="og:title" content="Atique Ahmad - Software Engineer">
-    <meta property="og:description" content="Portfolio of Atique Ahmad, a Software Engineer specializing in AI/Data Science. Explore projects, experience, and get in touch.">
-    <meta property="og:type" content="website">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/client/src/main.tsx"></script>
-  </body>
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    Content-Security-Policy — defence-in-depth against XSS / supply-chain
+    compromise.
+
+    script-src is 'self' only (no 'unsafe-inline'). The pre-hydration
+    theme script is loaded as an external file (theme-init.js) precisely
+    so we can enforce this. Any future inline script or `eval()`-style
+    payload from a compromised dependency will be blocked by the browser.
+
+    style-src keeps 'unsafe-inline' because React uses `style="…"` props
+    on elements. That's a style attribute, not a `<style>` element, and
+    the CSP style-src covers both — Tailwind + React need this.
+
+    connect-src is a tight allowlist of the exact hosts the app talks to.
+    form-action is 'self' to block a compromised page from redirecting
+    form submissions off-site.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    connect-src 'self' https://api.github.com https://openrouter.ai https://www.google.com;
+    img-src 'self' data: https://avatars.githubusercontent.com https://github.com https://www.google.com https://icons.duckduckgo.com;
+    font-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self';
+    frame-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+  " />
+  <!-- X-Content-Type-Options via meta is a hint; GH Pages sends it too. -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Pre-hydration theme swap. External file so CSP can be strict.
+       Bare relative path — Vite adds the base prefix exactly once for
+       both dev and production. -->
+  <script src="theme-init.js"></script>
+  <meta name="description"
+    content="Atique Ahmad — ML/AI Engineer working on LLM fine-tuning, RAG, hallucination detection, and agentic AI systems. Portfolio powered by GitMe." />
+  <meta name="keywords"
+    content="Atique Ahmad, ML Engineer, AI Engineer, LLM, Fine-tuning, RAG, Hallucination Detection, PyTorch, GitHub, Developer Portfolio, AI, React, Vite" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atique-ahmad-01.github.io/portfolio.dev/" />
+  <meta property="og:title" content="Atique Ahmad | ML/AI Engineer" />
+  <meta property="og:description"
+    content="LLM fine-tuning, RAG, hallucination detection, and agentic AI systems — GitHub contributions, projects, and an AI-synthesized professional summary." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/atique-ahmad-01/portfolio.dev/main/public/gitme_banner.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://atique-ahmad-01.github.io/portfolio.dev/" />
+  <meta property="twitter:title" content="Atique Ahmad | ML/AI Engineer" />
+  <meta property="twitter:description"
+    content="LLM fine-tuning, RAG, hallucination detection, and agentic AI systems." />
+  <meta property="twitter:image"
+    content="https://raw.githubusercontent.com/atique-ahmad-01/portfolio.dev/main/public/gitme_banner.png" />
+
+  <title>Atique Ahmad — GitMe | ML/AI Engineer Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://api.github.com" />
+  <link rel="dns-prefetch" href="https://api.github.com" />
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+    // ----------------------------------------------------------------------
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which will cause the browser to refresh the page without losing
+    // the history objects.
+    // ----------------------------------------------------------------------
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).filter(function (v) {
+          return v.indexOf('p=/') === 0
+        })[0];
+        if (decoded !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded.slice(3) + l.hash
+          );
+        }
+      }
+    }(window.location))
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

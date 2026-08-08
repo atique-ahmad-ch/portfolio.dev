@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  Theme tokens — dark is the default; .light on <html> flips them.  */
+/*  Values are r g b triples so Tailwind can apply /<alpha-value>.    */
+/* ------------------------------------------------------------------ */
+:root,
+:root.dark {
+  --gh-bg: 13 17 23;
+  --gh-bg-secondary: 22 27 34;
+  --gh-bg-tertiary: 1 4 9;
+  --gh-border: 48 54 61;
+  --gh-border-muted: 33 38 45;
+  --gh-text: 201 209 217;
+  --gh-text-secondary: 139 148 158;
+  --gh-text-link: 88 166 255;
+  --gh-accent: 31 111 235;
+  --gh-accent-success: 35 134 54;
+  --gh-accent-danger: 218 54 51;
+  --gh-accent-purple: 137 87 229;
+  --gh-status-open: 63 185 80;
+  --gh-status-closed: 248 81 73;
+  --gh-status-merged: 163 113 247;
+  --gh-status-draft: 139 148 158;
+  --gh-grid: 201 209 217;
+}
+
+:root.light {
+  --gh-bg: 255 255 255;
+  --gh-bg-secondary: 246 248 250;
+  --gh-bg-tertiary: 234 238 242;
+  --gh-border: 208 215 222;
+  --gh-border-muted: 216 222 228;
+  --gh-text: 31 35 40;
+  --gh-text-secondary: 101 109 118;
+  --gh-text-link: 9 105 218;
+  --gh-accent: 9 105 218;
+  --gh-accent-success: 26 127 55;
+  --gh-accent-danger: 207 34 46;
+  --gh-accent-purple: 130 80 223;
+  --gh-status-open: 26 127 55;
+  --gh-status-closed: 207 34 46;
+  --gh-status-merged: 130 80 223;
+  --gh-status-draft: 101 109 118;
+  --gh-grid: 31 35 40;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+:root.light {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  background-color: rgb(var(--gh-bg));
+  color: rgb(var(--gh-text));
+  min-height: 100vh;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--gh-bg));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--gh-border));
+  border: 3px solid rgb(var(--gh-bg));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--gh-text-secondary));
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Marquee animation for horizontal scrolling sections */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.hover\:pause-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* GitHub Sidebar Font Sizes */
+.github-name {
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.github-username {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+/* GitHub Markdown rendering fixes */
+.markdown-body img {
+  background-color: transparent;
+  max-width: 100%;
+  box-sizing: content-box;
+}
+
+.markdown-body img[align="center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.markdown-body img[align="right"] {
+  float: right;
+  margin-left: 4px;
+}
+
+.markdown-body img[align="left"] {
+  float: left;
+  margin-right: 4px;
+}
+
+/* Prose overrides to mimic GitHub's behavior */
+.prose :where(img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Handle [align] attributes on block elements */
+.prose [align="center"],
+[align="center"] {
+  text-align: center;
+  justify-content: center;
+}
+
+.prose [align="right"],
+[align="right"] {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.prose [align="left"],
+[align="left"] {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Specific fix for badges and inline images */
+.prose a img {
+  margin: 2px !important;
+  display: inline-block !important;
+}
+
+/* Ensure block elements with align work correctly as flex containers for mixed content */
+.prose div[align],
+.prose p[align],
+.prose h1[align],
+.prose h2[align],
+.prose h3[align],
+.prose h4[align] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Fix specific heading sizes and margins to match GitHub more closely */
+.prose h1 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose h2 {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose h3 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Remove extra margins from paragraphs */
+.prose p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Force icons in headings to be aligned without squashing banners */
+.prose h1 img,
+.prose h2 img,
+.prose h3 img {
+  height: auto;
+  max-height: 1.6em;
+  /* Allow banner-like SVGs more room */
+  width: auto;
+  margin: 0 0.25rem !important;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Specific fix for the typing SVG and other banner-like header images */
+.prose h3 img[src*="typing-svg"],
+.prose h3 img[src*="demolab.com"] {
+  max-height: none;
+  /* Let the SVG define its own height */
+  height: auto;
+  min-height: 32px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* More compact flex for aligned blocks */
+.prose div[align],
+.prose p[align],
+.prose h1[align],
+.prose h2[align],
+.prose h3[align] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  align-items: center;
+}
+
+/* List item improvements */
+.prose li p {
+  margin: 0 !important;
+  display: inline;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
