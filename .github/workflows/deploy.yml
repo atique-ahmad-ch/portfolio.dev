@@ -38,6 +38,10 @@ jobs:
         # `ghp_`/`ghs_` classic tokens because they can't be reliably
         # scope-limited.
         env:
+          # GitHub Pages serves this repo as a project page, so it needs the
+          # /portfolio.dev/ base path. Vercel (root domain) uses the vite.config.js
+          # default of '/' instead — see VITE_BASE_PATH in vite.config.js.
+          VITE_BASE_PATH: /portfolio.dev/
           VITE_GITHUB_USERNAME: ${{ github.repository_owner }}
           VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
           VITE_OPENROUTER_API_KEY: ${{ secrets.VITE_OPENROUTER_API_KEY }}

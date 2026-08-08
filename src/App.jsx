@@ -229,7 +229,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter basename="/portfolio.dev">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <div className="min-h-screen bg-github-bg text-github-text flex flex-col">
         {data && (
           <Navbar

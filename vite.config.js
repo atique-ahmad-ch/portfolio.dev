@@ -22,7 +22,10 @@ import react from '@vitejs/plugin-react'
  */
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio.dev/',
+  // GitHub Pages serves this as a project page under /portfolio.dev/, so the
+  // Pages workflow sets VITE_BASE_PATH explicitly. Vercel serves from the
+  // domain root, so the default here is '/'.
+  base: process.env.VITE_BASE_PATH || '/',
   server: {
     port: 3000,
     open: true,
