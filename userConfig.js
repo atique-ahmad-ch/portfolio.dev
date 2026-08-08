@@ -55,7 +55,7 @@ const userConfig = {
             org: "Paradigm Networks (eBricks-inc)",
             logoDomain: "paradigmnetworks.ai",
             period: "Nov 2023 — Present",
-            location: "Lahore, PK",
+            location: "Remote",
             highlights: [
                 "Developed and maintained LLM-based messaging applications using advanced AI techniques, from fine-tuning through production deployment.",
                 "Built agentic evaluation and verification services that fact-check and score LLM outputs for hallucination and factuality before they reach users.",
